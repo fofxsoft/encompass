@@ -8,23 +8,34 @@
 </head>
 
 <body>
-    <div class="feature">
-        <img src="img/code.svg" style="height: 48px;">
-        <h2>Code Editor</h2>
-        <p>
-            This code editor has all of the features of Visual Studio Code.
-        </p>
-        <a href="basic.html">Open Code Editor</a>
+    <div id="code">
+        <div class="header"></div>
+        <div class="workspace">
+            <div class="nav"></div>
+            <div class="welcome">
+                <div class="feature">
+                    <img src="img/code.svg" style="height: 48px;">
+                    <h2>Code Editor</h2>
+                    <p>
+                        This code editor has all of the features of Visual Studio Code.
+                    </p>
+                    <a href="edit.html">Open Code Editor</a>
+                </div>
+
+                <div class="feature">
+                    <img src="img/diff.svg" style="height: 48px;">
+                    <h2>File Diff Tool</h2>
+                    <p>
+                        This is the diff tool included with Visual Studio Code.
+                    </p>
+                    <a href="diff.html">Open Diff Tool</a>
+                </div>
+            </div>
+        </div>
+        <div class="status"></div>
     </div>
 
-    <div class="feature">
-        <img src="img/diff.svg" style="height: 48px;">
-        <h2>File Diff Tool</h2>
-        <p>
-            This is the diff tool included with Visual Studio Code.
-        </p>
-        <a href="diff.html">Open Diff Tool</a>
-    </div>
+    <script src="lib/jquery/min/jquery-3.3.1.js"></script>
 </body>
 
 </html>
