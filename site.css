@@ -25,8 +25,7 @@ body {
     #code .header {
         height: 52px;
         flex: initial;
-        /*background: #68217a;*/
-        background: #406480;
+        background: #68217a;
     }
 
     #code .workspace {
