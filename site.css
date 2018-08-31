@@ -38,6 +38,7 @@ body {
 
 #code .nav {
     width: 50px;
+    min-width: 50px;
     height: 100%;
     padding: 10px 0;
     flex: initial;

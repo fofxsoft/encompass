@@ -23,7 +23,7 @@
                     <img src="img/history.svg" />
                 </div>
             </div>
-            <div class="explorer"></div>
+            <div id="explorer" class="explorer"></div>
             <div class="document">
                 <div class="tabs">
                     <button class="tab active">Site.js (Working Tree)</button>
@@ -39,6 +39,7 @@
     <script src="lib/jquery/min/jquery-3.3.1.js"></script>
     <script src="lib/jquery-ui/min/jquery-ui-1.12.1.js"></script>
     <script src="lib/monaco/min/vs/loader.js"></script>
+    <script src="site.js"></script>
 
     <script>
         require.config({
@@ -48,7 +49,9 @@
         });
 
         require(["vs/editor/editor.main"], function () {
-            var editor = monaco.editor.createDiffEditor($("#editor")[0]);
+            var editor = monaco.editor.createDiffEditor($("#editor")[0], {
+                automaticLayout: true
+            });
 
             var value = {
                 original: "",
