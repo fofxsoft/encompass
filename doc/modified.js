@@ -1,5 +1,4 @@
 
-/// <reference path="../../references.js" />
 (function () {
 	"use strict";
 	
