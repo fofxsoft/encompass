@@ -2,27 +2,25 @@
 <html>
 
 <head>
+    <title>Encompass</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" href="lib/jquery-ui/min/jquery-ui-1.12.1.css" />
-    <link rel="stylesheet" href="site.css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" href="libraries/jquery-ui/min/jquery-ui-1.12.1.css" />
+    <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/site.css" />
+    <link rel="stylesheet" href="styles/monaco.css" />
 </head>
 
 <body>
-    <div id="code">
-        <div class="header"></div>
-        <div class="workspace">
-            <div class="nav">
-                <div class="item">
-                    <img src="img/files.svg" />
-                </div>
-                <div class="item">
-                    <img src="img/search.svg" />
-                </div>
-                <div class="item">
-                    <img src="img/history.svg" />
-                </div>
+    <div id="marvin">
+        <div class="header">
+            <div class="left"></div>
+            <div class="right">
+                <img class="logo" src="images/header-logo.svg" />
             </div>
+        </div>
+        <div class="workspace">
             <div id="explorer" class="explorer"></div>
             <div class="document">
                 <div class="tabs">
@@ -34,19 +32,44 @@
                     <div id="editor"></div>
                 </div>
             </div>
+            <div class="nav">
+                <div class="top">
+                    <a class="item fas fa-tachometer-alt" href="index.html">
+                        <span class="label">Dashboards</span>
+                    </a>
+                    <a class="item fas fa-route">
+                        <span class="label">Routing</span>
+                    </a>
+                    <a class="item fas fa-warehouse">
+                        <span class="label">Warehouse</span>
+                    </a>
+                    <a class="item fas fa-money-bill-alt">
+                        <span class="label">Financials</span>
+                    </a>
+                </div>
+                <div class="bottom">
+                    <a class="item fas fa-search">
+                        <span class="label">Search</span>
+                    </a>
+                    <a class="item fas fa-cog" href="code.html">
+                        <span class="label">Settings</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="status"></div>
     </div>
 
-    <script src="lib/jquery/min/jquery-3.3.1.js"></script>
-    <script src="lib/jquery-ui/min/jquery-ui-1.12.1.js"></script>
-    <script src="lib/monaco/min/vs/loader.js"></script>
-    <script src="site.js"></script>
+    <script src="libraries/jquery/min/jquery-3.3.1.js"></script>
+    <script src="libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
+    <script src="libraries/monaco/min/vs/loader.js"></script>
+    <script src="scripts/site.js"></script>
+    <script src="scripts/monaco.js"></script>
 
     <script>
         require.config({
             paths: {
-                "vs": "lib/monaco/min/vs"
+                "vs": "libraries/monaco/min/vs"
             }
         });
 
@@ -55,7 +78,7 @@
                 automaticLayout: true
             });
 
-            $.get("doc/original.js", function (data) {
+            $.get("documents/original.js", function (data) {
                 editor.setModel(monaco.editor.createModel(data, "javascript"));
             });
         });

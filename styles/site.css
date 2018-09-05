@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: var(--primary-background);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 34pt;
+    line-height: normal;
+    color: var(--workspace-dark);
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 20pt;
+    line-height: normal;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 16pt;
+    line-height: normal;
+}
+
+#marvin {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+#marvin .header {
+    height: 52px;
+    flex: initial;
+    display: flex;
+    justify-content: space-between;
+    background: var(--primary-background);
+}
+
+#marvin .header .left {
+    height: 52px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#marvin .header .right {
+    height: 52px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#marvin .header .logo  {
+    height: 22px;
+    margin: 17px;
+    opacity: 0.95;
+}
+
+#marvin .workspace {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+#marvin .nav {
+    width: 50px;
+    min-width: 50px;
+    height: 100%;
+    padding: 10px 0;
+    flex: initial;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: var(--navagation-background);
+    order: 1;
+}
+
+#marvin .nav .item {
+    width: 100%;
+    position: relative;
+    color: var(--navagation);
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#marvin .nav .item:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+#marvin .nav .item .label {
+    width: 120px;
+    padding: 7px 0;
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: 90%;
+    color: var(--navagation);
+    background: var(--navagation-background);
+    text-align: center;
+    font-size: 10pt;
+    font-weight: normal;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#marvin .nav .item:hover .label {
+    display: block;
+}
+
+#marvin .nav .active {
+    opacity: 1;
+    cursor: default;
+}
+
+#marvin .explorer {
+    width: 250px;
+    height: 100%;
+    flex: initial;
+    color: var(--control);
+    background: var(--control-background);
+    order: 2;
+}
+
+#marvin .document {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    order: 3;
+}
+
+#marvin .tabs {
+    height: 35px;
+    flex: initial;
+    background: var(--control-background);
+}
+
+#marvin .tabs .tab {
+    height: 32px;
+    color: var(--disabled);
+    background: var(--disabled-background);
+    margin: 3px 2px 0 0;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+    padding: 0 30px 0 30px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#marvin .tabs .active {
+    color: var(--workspace);
+    background: var(--workspace-background);
+    border-top: 2px var(--primary-background) solid;
+    padding-bottom: 2px;
+    cursor: default;
+}
+
+#marvin .data {
+    flex: 1;
+    overflow: auto;
+}
+
+#marvin .status {
+    height: 22px;
+    flex: initial;
+    background: var(--primary-background);
+}
+
+#columns {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 50px;
+    display: flex;
+    font-size: 10pt;
+    justify-content: stretch;
+    color: var(--workspace-light);
+}
+
+#columns .column {
+    width: 100%;
+}
+
+#columns .feature {
+    color: var(--control-light);
+    background: var(--control-light-background);
+    margin: 10px;
+    padding: 20px;
+}

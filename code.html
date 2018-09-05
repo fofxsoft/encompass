@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="styles/theme.css" />
     <link rel="stylesheet" href="styles/site.css" />
-    <link rel="stylesheet" href="styles/monaco.css" />
 </head>
 
 <body>
@@ -24,10 +23,36 @@
             <div id="explorer" class="explorer"></div>
             <div class="document">
                 <div class="tabs">
-                    <button class="tab active">Site.js (Working Tree)</button>
+                    <button class="tab active">Welcome</button>
                 </div>
                 <div class="data">
-                    <div id="editor"></div>
+                    <div id="columns">
+                        <div class="column">
+                            <h1>Encompass Code</h1>
+                            <h2>Develop Anyware</h2>
+                            <br />
+                            <br />
+                            <h3>Demo</h3>
+                            <a href="edit.html">Editor</a> - Site.js
+                            <br />
+                            <a href="diff.html">Diff Tool</a> - Site.js (Working Tree)
+                        </div>
+                        <div class="column">
+                            <div class="feature">
+                                Powered by Visual Studio Code.
+                            </div>
+                            <div class="feature">
+                                This code editor has all of the features of Visual Studio Code.
+                            </div>
+                            <div class="feature">
+                                This is the diff tool included with Visual Studio Code.
+                            </div>
+                            <div class="feature">
+                                Explore the Monaco API <a target="_blank" href="https://microsoft.github.io/monaco-editor/api/modules/monaco.editor.html">Here</a>.
+                                Or open the <a target="_blank" href="https://microsoft.github.io/monaco-editor/">Monaco Playground</a>.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="nav">
@@ -49,7 +74,7 @@
                     <a class="item fas fa-search">
                         <span class="label">Search</span>
                     </a>
-                    <a class="item fas fa-cog" href="code.html">
+                    <a class="item fas fa-cog active">
                         <span class="label">Settings</span>
                     </a>
                 </div>
@@ -60,38 +85,7 @@
 
     <script src="libraries/jquery/min/jquery-3.3.1.js"></script>
     <script src="libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
-    <script src="libraries/monaco/min/vs/loader.js"></script>
     <script src="scripts/site.js"></script>
-    <script src="scripts/monaco.js"></script>
-
-    <script>
-        require.config({
-            paths: {
-                "vs": "libraries/monaco/min/vs"
-            }
-        });
-
-        require(["vs/editor/editor.main"], function () {
-            var editor = monaco.editor.createDiffEditor($("#editor")[0], {
-                automaticLayout: true
-            });
-
-            var value = {
-                original: "",
-                modified: ""
-            }
-
-            $.get("documents/original.js", function (data) {
-                value.original = monaco.editor.createModel(data, "javascript");
-
-                $.get("documents/modified.js", function (data) {
-                    value.modified = monaco.editor.createModel(data, "javascript")
-
-                    editor.setModel(value);
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

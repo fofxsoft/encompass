@@ -2,67 +2,101 @@
 <html>
 
 <head>
+    <title>Encompass</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <link rel="stylesheet" href="lib/jquery-ui/min/jquery-ui-1.12.1.css" />
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="libraries/jquery-ui/min/jquery-ui-1.12.1.css" />
+    <link rel="stylesheet" href="libraries/gridster/min/jquery.gridster.css" />
+    <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/site.css" />
+    <link rel="stylesheet" href="styles/index.css" />
 </head>
 
 <body>
-    <div id="code">
-        <div class="header"></div>
-        <div class="workspace">
-            <div class="nav">
-                <div class="item">
-                    <img src="img/files.svg" />
-                </div>
-                <div class="item">
-                    <img src="img/search.svg" />
-                </div>
-                <div class="item">
-                    <img src="img/history.svg" />
-                </div>
+    <div id="marvin">
+        <div class="header">
+            <div class="left"></div>
+            <div class="right">
+                <img class="logo" src="images/header-logo.svg" />
             </div>
+        </div>
+        <div class="workspace">
+            <div id="explorer" class="explorer"></div>
             <div class="document">
                 <div class="tabs">
-                    <button class="tab active">Welcome</button>
+                    <button class="tab active">Sales</button>
+                    <button class="tab">Inventory</button>
+                    <button class="tab">Fleet</button>
                 </div>
                 <div class="data">
-                    <div id="welcome">
-                        <div class="content">
-                            <h1>Encompass Code</h1>
-                            <h2>Develop Anyware</h2>
-                            <br />
-                            <br />
-                            <h3>Demo</h3>
-                            <a href="edit.html">Editor</a> - Site.js
-                            <br />
-                            <a href="diff.html">Diff Tool</a> - Site.js (Working Tree)
+                    <div id="dashboard">
+                        <div class="row">
+                            <div class="item">
+                                <div id="demo-six"></div>
+                            </div>
+                            <div class="item">
+                                <div id="demo-seven"></div>
+                            </div>
+                            <div class="item">
+                                <div id="demo-eight"></div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <div class="feature">
-                                Powered by Visual Studio Code.
+                        <div class="row">
+                            <div class="item">
+                                <div id="demo-five"></div>
                             </div>
-                            <div class="feature">
-                                This code editor has all of the features of Visual Studio Code.
+                        </div>
+                        <div class="row">
+                            <div class="item">
+                                <div id="demo-one"></div>
                             </div>
-                            <div class="feature">
-                                This is the diff tool included with Visual Studio Code.
+                            <div class="item">
+                                <div id="demo-two"></div>
                             </div>
-                            <div class="feature">
-                                Explore the Monaco API <a target="_blank" href="https://microsoft.github.io/monaco-editor/api/modules/monaco.editor.html">Here</a>. Or open the <a target="_blank" href="https://microsoft.github.io/monaco-editor/">Monaco Playground</a>.
+                            <div class="item">
+                                <div id="demo-three"></div>
+                            </div>
+                            <div class="item">
+                                <div id="demo-four"></div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="top">
+                    <a class="item fas fa-tachometer-alt active">
+                        <span class="label">Dashboards</span>
+                    </a>
+                    <a class="item fas fa-route">
+                        <span class="label">Routing</span>
+                    </a>
+                    <a class="item fas fa-warehouse">
+                        <span class="label">Warehouse</span>
+                    </a>
+                    <a class="item fas fa-money-bill-alt">
+                        <span class="label">Financials</span>
+                    </a>
+                </div>
+                <div class="bottom">
+                    <a class="item fas fa-search">
+                        <span class="label">Search</span>
+                    </a>
+                    <a class="item fas fa-cog" href="code.html">
+                        <span class="label">Settings</span>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="status"></div>
     </div>
 
-    <script src="lib/jquery/min/jquery-3.3.1.js"></script>
-    <script src="lib/jquery-ui/min/jquery-ui-1.12.1.js"></script>
-    <script src="site.js"></script>
+    <script src="libraries/jquery/min/jquery-3.3.1.js"></script>
+    <script src="libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
+    <script src="libraries/gridster/src/jquery.gridster.js"></script>
+    <script src="scripts/site.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
