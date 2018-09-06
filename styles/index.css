@@ -1,11 +1,11 @@
-#dashboard {
+dashboard {
     padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-#dashboard .row {
+dashboard row {
     min-height: 20px;
     display: flex;
     flex-direction: row;
@@ -13,13 +13,13 @@
     align-items: stretch;
 }
 
-#dashboard .item {
+dashboard item {
     width: 100%;
     margin: 5px;
     background: var(--workspace-background);
 }
 
-#dashboard .item *:first-child {
+dashboard item *:first-child {
     width: 100%;
     height: 100%;
 }

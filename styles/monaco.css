@@ -1,20 +1,21 @@
-#marvin .data {
+application data {
     overflow: hidden !important;
 }
 
-#editor {
+monaco {
     width: 100%;
     height: 100%;
+    display: block;
 }
 
-#editor a,
-#editor a:link,
-#editor a:visited {
+monaco a,
+monaco a:link,
+monaco a:visited {
     text-decoration: none;
     color: var(--workspace);
 }
 
-#editor a:hover {
+monaco a:hover {
     text-decoration: none;
     color: var(--highlight);
     background: var(--highlight-background);

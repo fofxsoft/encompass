@@ -14,58 +14,58 @@
 </head>
 
 <body>
-    <div id="marvin">
-        <div class="header">
-            <div class="left"></div>
-            <div class="right">
+    <application>
+        <header>
+            <section class="left"></section>
+            <section class="right">
                 <img class="logo" src="images/header-logo.svg" />
-            </div>
-        </div>
-        <div class="workspace">
-            <div id="explorer" class="explorer"></div>
-            <div class="document">
-                <div class="tabs">
+            </section>
+        </header>
+        <workspace>
+            <explorer></explorer>
+            <document>
+                <tabs>
                     <button class="tab active">Sales</button>
                     <button class="tab">Inventory</button>
                     <button class="tab">Fleet</button>
-                </div>
-                <div class="data">
-                    <div id="dashboard">
-                        <div class="row">
-                            <div class="item">
+                </tabs>
+                <page>
+                    <dashboard>
+                        <row>
+                            <item>
                                 <div id="demo-six"></div>
-                            </div>
-                            <div class="item">
+                            </item>
+                            <item>
                                 <div id="demo-seven"></div>
-                            </div>
-                            <div class="item">
+                            </item>
+                            <item>
                                 <div id="demo-eight"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="item">
+                            </item>
+                        </row>
+                        <row>
+                            <item>
                                 <div id="demo-five"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="item">
+                            </item>
+                        </row>
+                        <row>
+                            <item>
                                 <div id="demo-one"></div>
-                            </div>
-                            <div class="item">
+                            </item>
+                            <item>
                                 <div id="demo-two"></div>
-                            </div>
-                            <div class="item">
+                            </item>
+                            <item>
                                 <div id="demo-three"></div>
-                            </div>
-                            <div class="item">
+                            </item>
+                            <item>
                                 <div id="demo-four"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="nav">
-                <div class="top">
+                            </item>
+                        </row>
+                    </dashboard>
+                </page>
+            </document>
+            <navigation>
+                <section class="top">
                     <a class="item fas fa-tachometer-alt active">
                         <span class="label">Dashboards</span>
                     </a>
@@ -78,19 +78,19 @@
                     <a class="item fas fa-money-bill-alt">
                         <span class="label">Financials</span>
                     </a>
-                </div>
-                <div class="bottom">
+                </section>
+                <section class="bottom">
                     <a class="item fas fa-search">
                         <span class="label">Search</span>
                     </a>
                     <a class="item fas fa-cog" href="code.html">
                         <span class="label">Settings</span>
                     </a>
-                </div>
-            </div>
-        </div>
-        <div class="status"></div>
-    </div>
+                </section>
+            </navigation>
+        </workspace>
+        <status></status>
+    </application>
 
     <script src="libraries/jquery/min/jquery-3.3.1.js"></script>
     <script src="libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>

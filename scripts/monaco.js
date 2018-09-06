@@ -1,9 +1,9 @@
 $(function() {
-    $("#explorer").on("resizestart", function() {
-        $("#editor").hide();
+    $("explorer").on("resizestart", function() {
+        $("monaco").hide();
     });
 
-    $("#explorer").on("resizestop", function() {
-        $("#editor").show();
+    $("explorer").on("resizestop", function() {
+        $("monaco").show();
     });
 });

@@ -45,14 +45,14 @@ h3 {
     line-height: normal;
 }
 
-#marvin {
+application {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
 }
 
-#marvin .header {
+application header {
     height: 52px;
     flex: initial;
     display: flex;
@@ -60,25 +60,25 @@ h3 {
     background: var(--primary-background);
 }
 
-#marvin .header .left {
+application header section.left {
     height: 52px;
     display: flex;
     justify-content: flex-start;
 }
 
-#marvin .header .right {
+application header section.right {
     height: 52px;
     display: flex;
     justify-content: flex-end;
 }
 
-#marvin .header .logo  {
+application header img.logo  {
     height: 22px;
     margin: 17px;
     opacity: 0.95;
 }
 
-#marvin .workspace {
+application workspace {
     height: 100%;
     flex: 1;
     display: flex;
@@ -86,7 +86,7 @@ h3 {
     justify-content: stretch;
 }
 
-#marvin .nav {
+application navigation {
     width: 50px;
     min-width: 50px;
     height: 100%;
@@ -99,7 +99,7 @@ h3 {
     order: 1;
 }
 
-#marvin .nav .item {
+application navigation a.item {
     width: 100%;
     position: relative;
     color: var(--navagation);
@@ -111,12 +111,12 @@ h3 {
     cursor: pointer;
 }
 
-#marvin .nav .item:hover {
+application navigation a.item:hover {
     opacity: 1;
     text-decoration: none;
 }
 
-#marvin .nav .item .label {
+application navigation a.item span.label {
     width: 120px;
     padding: 7px 0;
     display: none;
@@ -131,16 +131,16 @@ h3 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-#marvin .nav .item:hover .label {
+application navigation a.item:hover span.label {
     display: block;
 }
 
-#marvin .nav .active {
+application navigation a.active {
     opacity: 1;
     cursor: default;
 }
 
-#marvin .explorer {
+application explorer {
     width: 250px;
     height: 100%;
     flex: initial;
@@ -149,7 +149,7 @@ h3 {
     order: 2;
 }
 
-#marvin .document {
+application document {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -157,13 +157,13 @@ h3 {
     order: 3;
 }
 
-#marvin .tabs {
+application tabs {
     height: 35px;
     flex: initial;
     background: var(--control-background);
 }
 
-#marvin .tabs .tab {
+application tabs button.tab {
     height: 32px;
     color: var(--disabled);
     background: var(--disabled-background);
@@ -178,7 +178,7 @@ h3 {
     cursor: pointer;
 }
 
-#marvin .tabs .active {
+application tabs button.active {
     color: var(--workspace);
     background: var(--workspace-background);
     border-top: 2px var(--primary-background) solid;
@@ -186,18 +186,18 @@ h3 {
     cursor: default;
 }
 
-#marvin .data {
+application page {
     flex: 1;
     overflow: auto;
 }
 
-#marvin .status {
+application status {
     height: 22px;
     flex: initial;
     background: var(--primary-background);
 }
 
-#columns {
+application static {
     max-width: 1200px;
     margin: 100px auto;
     padding: 0 50px;
@@ -207,13 +207,14 @@ h3 {
     color: var(--workspace-light);
 }
 
-#columns .column {
+application static column {
     width: 100%;
 }
 
-#columns .feature {
+application static feature {
     color: var(--control-light);
     background: var(--control-light-background);
+    display: block;
     margin: 10px;
     padding: 20px;
 }

@@ -13,27 +13,27 @@
 </head>
 
 <body>
-    <div id="marvin">
-        <div class="header">
-            <div class="left"></div>
-            <div class="right">
+    <application>
+        <header>
+            <section class="left"></section>
+            <section class="right">
                 <img class="logo" src="images/header-logo.svg" />
-            </div>
-        </div>
-        <div class="workspace">
-            <div id="explorer" class="explorer"></div>
-            <div class="document">
-                <div class="tabs">
+            </section>
+        </header>
+        <workspace>
+            <explorer></explorer>
+            <document>
+                <tabs>
                     <button class="tab">Site.html</button>
                     <button class="tab active">Site.js</button>
                     <button class="tab">Site.css</button>
-                </div>
-                <div class="data">
-                    <div id="editor"></div>
-                </div>
-            </div>
-            <div class="nav">
-                <div class="top">
+                </tabs>
+                <page>
+                    <monaco />
+                </page>
+            </document>
+            <navigation>
+                <section class="top">
                     <a class="item fas fa-tachometer-alt" href="index.html">
                         <span class="label">Dashboards</span>
                     </a>
@@ -46,19 +46,19 @@
                     <a class="item fas fa-money-bill-alt">
                         <span class="label">Financials</span>
                     </a>
-                </div>
-                <div class="bottom">
+                </section>
+                <section class="bottom">
                     <a class="item fas fa-search">
                         <span class="label">Search</span>
                     </a>
                     <a class="item fas fa-cog" href="code.html">
                         <span class="label">Settings</span>
                     </a>
-                </div>
-            </div>
-        </div>
-        <div class="status"></div>
-    </div>
+                </section>
+            </navigation>
+        </workspace>
+        <status></status>
+    </application>
 
     <script src="libraries/jquery/min/jquery-3.3.1.js"></script>
     <script src="libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
@@ -74,7 +74,7 @@
         });
 
         require(["vs/editor/editor.main"], function () {
-            var editor = monaco.editor.create($("#editor")[0], {
+            var editor = monaco.editor.create($("monaco")[0], {
                 automaticLayout: true
             });
 
