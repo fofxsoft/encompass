@@ -3,12 +3,16 @@
 
 <head>
     <title>Encompass</title>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
     <link rel="stylesheet" href="libraries/jquery-ui/min/jquery-ui-1.12.1.css" />
     <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css" />
+
     <link rel="stylesheet" href="styles/theme.css" />
     <link rel="stylesheet" href="styles/site.css" />
+    <link rel="stylesheet" href="styles/monaco.css" />
 </head>
 
 <body>
@@ -19,24 +23,26 @@
                 <img class="logo" src="images/header-logo.svg" />
             </section>
         </header>
+
         <workspace>
             <explorer></explorer>
+
             <document>
                 <tabs>
-                    <button class="tab active">Welcome</button>
+                    <button page="welcome" class="tab active">Welcome</button>
+                    <button page="site_txt" class="tab">Site.html</button>
+                    <button page="site_js" class="tab">Site.js</button>
+                    <button page="site_css" class="tab">Site.css</button>
+                    <button page="diff_original_js" class="tab">Library.js (Working Tree)</button>
                 </tabs>
-                <page>
+
+                <page id="welcome" class="active">
                     <static>
                         <column>
                             <h1>Encompass Code</h1>
                             <h2>Develop Anyware</h2>
-                            <br />
-                            <br />
-                            <h3>Demo</h3>
-                            <a href="edit.html">Editor</a> - Site.js
-                            <br />
-                            <a href="diff.html">Diff Tool</a> - Site.js (Working Tree)
                         </column>
+
                         <column>
                             <feature>
                                 Powered by Visual Studio Code.
@@ -49,43 +55,62 @@
                             </feature>
                             <feature>
                                 Explore the Monaco API <a target="_blank" href="https://microsoft.github.io/monaco-editor/api/modules/monaco.editor.html">Here</a>.
-                                Or open the <a target="_blank" href="https://microsoft.github.io/monaco-editor/">Monaco Playground</a>.
+                                Or open the <a target="_blank" href="https://microsoft.github.io/monaco-editor/">Monaco
+                                    Playground</a>.
                             </feature>
                         </column>
                     </static>
                 </page>
+
+                <page id="site_txt" class="lock">
+                    <monaco id="editor_site_txt" />
+                </page>
+
+                <page id="site_js" class="lock">
+                    <monaco id="editor_site_js" />
+                </page>
+
+                <page id="site_css" class="lock">
+                    <monaco id="editor_site_css" />
+                </page>
+
+                <page id="diff_original_js" class="lock">
+                    <monaco id="editor_diff_original_js" />
+                </page>
             </document>
+
             <navigation>
                 <section class="top">
-                    <a class="item fas fa-tachometer-alt" href="index.html">
-                        <span class="label">Dashboards</span>
-                    </a>
-                    <a class="item fas fa-route">
-                        <span class="label">Routing</span>
-                    </a>
-                    <a class="item fas fa-warehouse">
-                        <span class="label">Warehouse</span>
-                    </a>
-                    <a class="item fas fa-money-bill-alt">
-                        <span class="label">Financials</span>
-                    </a>
+                    <a class="item fas fa-tachometer-alt" href="index.html" title="Dashboards"></a>
+                    <a class="item fas fa-route" title="Routing"></a>
+                    <a class="item fas fa-warehouse" title="Warehouse"></a>
+                    <a class="item fas fa-money-bill-alt" title="Financials"></a>
                 </section>
+
                 <section class="bottom">
-                    <a class="item fas fa-search">
-                        <span class="label">Search</span>
-                    </a>
-                    <a class="item fas fa-cog active">
-                        <span class="label">Settings</span>
-                    </a>
+                    <a class="item fas fa-search" title="Search"></a>
+                    <a class="item fas fa-cog active" title="Settings"></a>
                 </section>
             </navigation>
         </workspace>
+
         <status></status>
     </application>
 
     <script src="libraries/jquery/min/jquery-3.3.1.js"></script>
     <script src="libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
+    <script src="libraries/monaco/min/vs/loader.js"></script>
+
     <script src="scripts/site.js"></script>
+    <script src="scripts/monaco.js"></script>
+
+    <script>
+        LoadFile("documents/site.txt", "html");
+        LoadFile("documents/site.js", "javascript");
+        LoadFile("documents/site.css", "css");
+
+        LoadDiff("documents/original.js", "documents/modified.js", "javascript");
+    </script>
 </body>
 
 </html>

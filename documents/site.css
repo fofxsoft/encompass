@@ -135,7 +135,6 @@ application {
         display: flex;
         flex-direction: column;
         justify-content: stretch;
-        overflow: hidden;
         order: 3;
     }
 
@@ -176,10 +175,6 @@ application {
 
         application page.active {
             display: block;
-        }
-
-        application page.lock {
-            overflow: hidden;
         }
 
     application status {

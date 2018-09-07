@@ -1,22 +1,22 @@
-application data {
-    overflow: hidden !important;
-}
-
 monaco {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-monaco a,
-monaco a:link,
-monaco a:visited {
-    text-decoration: none;
-    color: var(--workspace);
-}
+    monaco a,
+    monaco a:link,
+    monaco a:visited {
+        text-decoration: none;
+        color: var(--workspace);
+    }
 
-monaco a:hover {
-    text-decoration: none;
-    color: var(--highlight);
-    background: var(--highlight-background);
-}
+    monaco a:hover {
+        text-decoration: none;
+        color: var(--highlight);
+        background: var(--highlight-background);
+    }
+
+    monaco .scroll-decoration {
+        display: none !important;
+    }
