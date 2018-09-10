@@ -45,14 +45,14 @@ h3 {
     line-height: normal;
 }
 
-application {
+platform {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
 }
 
-    application header {
+    platform header {
         height: 52px;
         flex: initial;
         display: flex;
@@ -60,25 +60,25 @@ application {
         background: var(--primary-background);
     }
 
-        application header section.left {
+        platform header section.left {
             height: 52px;
             display: flex;
             justify-content: flex-start;
         }
 
-        application header section.right {
+        platform header section.right {
             height: 52px;
             display: flex;
             justify-content: flex-end;
         }
 
-        application header img.logo  {
+        platform header img.logo  {
             height: 22px;
             margin: 17px;
             opacity: 0.95;
         }
 
-    application workspace {
+    platform workspace {
         height: 100%;
         flex: 1;
         display: flex;
@@ -86,7 +86,7 @@ application {
         justify-content: stretch;
     }
 
-    application navigation {
+    platform navigation {
         width: 50px;
         min-width: 50px;
         height: 100%;
@@ -99,7 +99,7 @@ application {
         order: 1;
     }
 
-        application navigation a.item {
+        platform navigation a.item {
             width: 100%;
             position: relative;
             color: var(--navagation);
@@ -111,17 +111,17 @@ application {
             cursor: pointer;
         }
 
-            application navigation a.item:hover {
+            platform navigation a.item:hover {
                 opacity: 1;
                 text-decoration: none;
             }
 
-        application navigation a.active {
+        platform navigation a.active {
             opacity: 1;
             cursor: default;
         }
 
-    application explorer {
+    platform explorer {
         width: 250px;
         height: 100%;
         flex: initial;
@@ -130,7 +130,7 @@ application {
         order: 2;
     }
 
-    application document {
+    platform application {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -139,13 +139,13 @@ application {
         order: 3;
     }
 
-    application tabs {
+    platform tabs {
         height: 35px;
         flex: initial;
         background: var(--control-background);
     }
 
-        application tabs button.tab {
+        platform tabs button.tab {
             height: 32px;
             color: var(--disabled);
             background: var(--disabled-background);
@@ -160,7 +160,7 @@ application {
             cursor: pointer;
         }
 
-        application tabs button.active {
+        platform tabs button.active {
             color: var(--workspace);
             background: var(--workspace-background);
             border-top: 2px var(--primary-background) solid;
@@ -168,27 +168,27 @@ application {
             cursor: default;
         }
 
-    application page {
+    platform component {
         flex: 1;
         overflow: auto;
         display: none;
     }
 
-        application page.active {
+        platform component.active {
             display: block;
         }
 
-        application page.lock {
+        platform component.lock {
             overflow: hidden;
         }
 
-    application status {
+    platform status {
         height: 22px;
         flex: initial;
         background: var(--primary-background);
     }
 
-    application static {
+    platform static {
         max-width: 1200px;
         margin: 100px auto;
         padding: 0 50px;
@@ -198,14 +198,40 @@ application {
         color: var(--workspace-light);
     }
 
-        application static column {
+        platform static column {
             width: 100%;
         }
 
-        application static feature {
+        platform static feature {
             color: var(--control-light);
             background: var(--control-light-background);
             display: block;
             margin: 10px;
             padding: 20px;
+        }
+
+    platform mask {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--mask);
+        background: var(--mask-background);
+    }
+
+    platform loader {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 21pt;
+        text-align: center;
+        margin-bottom: 150px;
+    }
+
+        platform loader img {
+            width: 57px;
+            height: 57px;
+            margin-bottom: 10px;
         }

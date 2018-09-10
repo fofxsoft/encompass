@@ -7,10 +7,10 @@ $(function() {
 
     $("tabs").on("click", ".tab", function () {
         var tab = $(this);
-        var page = tab.attr("page");
+        var page = tab.attr("component");
 
         if (page != "" && !$(this).hasClass("active")) {
-            $("page").hide();
+            $("component").hide();
             $("tabs .tab").removeClass("active");
             $("#" + page).show();
 

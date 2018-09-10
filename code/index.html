@@ -7,36 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-    <link rel="stylesheet" href="libraries/jquery-ui/min/jquery-ui-1.12.1.css" />
-    <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/static/libraries/jquery-ui/min/jquery-ui-1.12.1.css" />
+    <link rel="stylesheet" href="/static/libraries/fontawesome/css/all.min.css" />
 
-    <link rel="stylesheet" href="styles/theme.css" />
-    <link rel="stylesheet" href="styles/site.css" />
-    <link rel="stylesheet" href="styles/monaco.css" />
+    <link rel="stylesheet" href="/shared/theme.css" />
+    <link rel="stylesheet" href="/shared/site.css" />
+    <link rel="stylesheet" href="monaco.css" />
 </head>
 
 <body>
-    <application>
+    <platform>
         <header>
             <section class="left"></section>
             <section class="right">
-                <img class="logo" src="images/header-logo.svg" />
+                <img class="logo" src="/static/images/header-logo.svg" />
             </section>
         </header>
 
         <workspace>
             <explorer></explorer>
 
-            <document>
+            <application>
                 <tabs>
-                    <button page="welcome" class="tab active">Welcome</button>
-                    <button page="site_txt" class="tab">Site.html</button>
-                    <button page="site_js" class="tab">Site.js</button>
-                    <button page="site_css" class="tab">Site.css</button>
-                    <button page="diff_original_js" class="tab">Library.js (Working Tree)</button>
+                    <button component="welcome" class="tab active">Welcome</button>
+                    <button component="site_txt" class="tab">Site.html</button>
+                    <button component="site_js" class="tab">Site.js</button>
+                    <button component="site_css" class="tab">Site.css</button>
+                    <button component="diff_original_js" class="tab">Library.js (Working Tree)</button>
                 </tabs>
 
-                <page id="welcome" class="active">
+                <component id="welcome" class="active">
                     <static>
                         <column>
                             <h1>Encompass Code</h1>
@@ -60,28 +60,28 @@
                             </feature>
                         </column>
                     </static>
-                </page>
+                </component>
 
-                <page id="site_txt" class="lock">
+                <component id="site_txt" class="lock">
                     <monaco id="editor_site_txt" />
-                </page>
+                </component>
 
-                <page id="site_js" class="lock">
+                <component id="site_js" class="lock">
                     <monaco id="editor_site_js" />
-                </page>
+                </component>
 
-                <page id="site_css" class="lock">
+                <component id="site_css" class="lock">
                     <monaco id="editor_site_css" />
-                </page>
+                </component>
 
-                <page id="diff_original_js" class="lock">
+                <component id="diff_original_js" class="lock">
                     <monaco id="editor_diff_original_js" />
-                </page>
-            </document>
+                </component>
+            </application>
 
             <navigation>
                 <section class="top">
-                    <a class="item fas fa-tachometer-alt" href="index.html" title="Dashboards"></a>
+                    <a class="item fas fa-tachometer-alt" href="/dashboard/" title="Dashboards"></a>
                     <a class="item fas fa-route" title="Routing"></a>
                     <a class="item fas fa-warehouse" title="Warehouse"></a>
                     <a class="item fas fa-money-bill-alt" title="Financials"></a>
@@ -89,27 +89,27 @@
 
                 <section class="bottom">
                     <a class="item fas fa-search" title="Search"></a>
-                    <a class="item fas fa-cog active" title="Settings"></a>
+                    <a class="item fas fa-cog active" href="/code/" title="Settings"></a>
                 </section>
             </navigation>
         </workspace>
 
         <status></status>
-    </application>
+    </platform>
 
-    <script src="libraries/jquery/min/jquery-3.3.1.js"></script>
-    <script src="libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
-    <script src="libraries/monaco/min/vs/loader.js"></script>
+    <script src="/static/libraries/jquery/min/jquery-3.3.1.js"></script>
+    <script src="/static/libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
+    <script src="/static/libraries/monaco/min/vs/loader.js"></script>
 
-    <script src="scripts/site.js"></script>
-    <script src="scripts/monaco.js"></script>
+    <script src="/shared/site.js"></script>
+    <script src="monaco.js"></script>
 
     <script>
-        LoadFile("documents/site.txt", "html");
-        LoadFile("documents/site.js", "javascript");
-        LoadFile("documents/site.css", "css");
+        LoadFile("/documents/site.txt", "html");
+        LoadFile("/documents/site.js", "javascript");
+        LoadFile("/documents/site.css", "css");
 
-        LoadDiff("documents/original.js", "documents/modified.js", "javascript");
+        LoadDiff("/documents/original.js", "/documents/modified.js", "javascript");
     </script>
 </body>
 

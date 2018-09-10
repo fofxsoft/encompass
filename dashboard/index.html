@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Encompass</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <link rel="stylesheet" href="/static/libraries/jquery-ui/min/jquery-ui-1.12.1.css" />
+    <link rel="stylesheet" href="/static/libraries/fontawesome/css/all.min.css" />
+
+    <link rel="stylesheet" href="/shared/theme.css" />
+    <link rel="stylesheet" href="/shared/site.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+    <platform>
+        <header>
+            <section class="left"></section>
+            <section class="right">
+                <img class="logo" src="/static/images/header-logo.svg" />
+            </section>
+        </header>
+
+        <workspace>
+            <explorer></explorer>
+
+            <application>
+                <tabs>
+                    <button component="sales" class="tab active">Sales</button>
+                    <button component="inventory" class="tab">Inventory</button>
+                    <button component="fleet" class="tab">Fleet</button>
+                </tabs>
+
+                <component id="sales" class="active">
+                    <dashboard>
+                        <row>
+                            <item>
+                                <div id="six"></div>
+                            </item>
+                            <item>
+                                <div id="seven"></div>
+                            </item>
+                            <item>
+                                <div id="eight"></div>
+                            </item>
+                        </row>
+
+                        <row>
+                            <item>
+                                <div id="five"></div>
+                            </item>
+                        </row>
+
+                        <row>
+                            <item>
+                                <div id="one"></div>
+                            </item>
+                            <item>
+                                <div id="two"></div>
+                            </item>
+                            <item>
+                                <div id="three"></div>
+                            </item>
+                            <item>
+                                <div id="four"></div>
+                            </item>
+                        </row>
+                    </dashboard>
+                </component>
+
+                <component id="inventory">
+                    <dashboard>
+                        <row>
+                            <item>
+                                <div id="five"></div>
+                            </item>
+                        </row>
+
+                        <row>
+                            <item>
+                                <div id="six"></div>
+                            </item>
+                            <item>
+                                <div id="seven"></div>
+                            </item>
+                            <item>
+                                <div id="eight"></div>
+                            </item>
+                        </row>
+                    </dashboard>
+                </component>
+
+                <component id="fleet">
+                    <dashboard>
+                        <row>
+                            <item>
+                                <div id="six"></div>
+                            </item>
+                            <item>
+                                <div id="seven"></div>
+                            </item>
+                            <item>
+                                <div id="eight"></div>
+                            </item>
+                        </row>
+
+                        <row>
+                            <item>
+                                <div id="one"></div>
+                            </item>
+                            <item>
+                                <div id="two"></div>
+                            </item>
+                            <item>
+                                <div id="three"></div>
+                            </item>
+                            <item>
+                                <div id="four"></div>
+                            </item>
+                        </row>
+                    </dashboard>
+                </component>
+            </application>
+
+            <navigation>
+                <section class="top">
+                    <a class="item fas fa-tachometer-alt active" href="/dashboard/" title="Dashboards"></a>
+                    <a class="item fas fa-route" title="Routing"></a>
+                    <a class="item fas fa-warehouse" title="Warehouse"></a>
+                    <a class="item fas fa-money-bill-alt" title="Financials"></a>
+                </section>
+
+                <section class="bottom">
+                    <a class="item fas fa-search" title="Search"></a>
+                    <a class="item fas fa-cog" href="/code/" title="Settings"></a>
+                </section>
+            </navigation>
+        </workspace>
+
+        <status></status>
+    </platform>
+
+    <script src="/static/libraries/jquery/min/jquery-3.3.1.js"></script>
+    <script src="/static/libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
+
+    <script src="/shared/site.js"></script>
+</body>
+
+</html>

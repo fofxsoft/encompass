@@ -12,7 +12,7 @@ var editor = {};
 
 require.config({
     paths: {
-        "vs": "libraries/monaco/min/vs"
+        "vs": "/static/libraries/monaco/min/vs"
     }
 });
 
@@ -50,6 +50,8 @@ var LoadDiff = function (original, modified, type) {
                 value.modified = monaco.editor.createModel(data, type)
 
                 editor[name].setModel(value);
+
+                //$("mask").hide();
             });
         });
     });
