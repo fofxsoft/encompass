@@ -12,7 +12,7 @@ var editor = {};
 
 require.config({
     paths: {
-        "vs": "/static/libraries/monaco/min/vs"
+        "vs": "../static/libraries/monaco/min/vs"
     }
 });
 
