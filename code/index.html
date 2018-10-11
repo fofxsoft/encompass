@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
-    <link rel="stylesheet" href="/static/libraries/jquery-ui/min/jquery-ui-1.12.1.css" />
-    <link rel="stylesheet" href="/static/libraries/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../static/libraries/jquery-ui/min/jquery-ui-1.12.1.css" />
+    <link rel="stylesheet" href="../static/libraries/fontawesome/css/all.min.css" />
 
-    <link rel="stylesheet" href="/shared/theme.css" />
-    <link rel="stylesheet" href="/shared/site.css" />
+    <link rel="stylesheet" href="../shared/theme.css" />
+    <link rel="stylesheet" href="../shared/site.css" />
     <link rel="stylesheet" href="monaco.css" />
 </head>
 
@@ -20,7 +20,7 @@
         <header>
             <section class="left"></section>
             <section class="right">
-                <img class="logo" src="/static/images/header-logo.svg" />
+                <img class="logo" src="../static/images/header-logo.svg" />
             </section>
         </header>
 
@@ -81,7 +81,7 @@
 
             <navigation>
                 <section class="top">
-                    <a class="item fas fa-tachometer-alt" href="/dashboard/" title="Dashboards"></a>
+                    <a class="item fas fa-tachometer-alt" href="../dashboard/" title="Dashboards"></a>
                     <a class="item fas fa-route" title="Routing"></a>
                     <a class="item fas fa-warehouse" title="Warehouse"></a>
                     <a class="item fas fa-money-bill-alt" title="Financials"></a>
@@ -89,7 +89,7 @@
 
                 <section class="bottom">
                     <a class="item fas fa-search" title="Search"></a>
-                    <a class="item fas fa-cog active" href="/code/" title="Settings"></a>
+                    <a class="item fas fa-cog active" href="../code/" title="Settings"></a>
                 </section>
             </navigation>
         </workspace>
@@ -97,19 +97,19 @@
         <status></status>
     </platform>
 
-    <script src="/static/libraries/jquery/min/jquery-3.3.1.js"></script>
-    <script src="/static/libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
-    <script src="/static/libraries/monaco/min/vs/loader.js"></script>
+    <script src="../static/libraries/jquery/min/jquery-3.3.1.js"></script>
+    <script src="../static/libraries/jquery-ui/min/jquery-ui-1.12.1.js"></script>
+    <script src="../static/libraries/monaco/min/vs/loader.js"></script>
 
-    <script src="/shared/site.js"></script>
+    <script src="../shared/site.js"></script>
     <script src="monaco.js"></script>
 
     <script>
-        LoadFile("/documents/site.txt", "html");
-        LoadFile("/documents/site.js", "javascript");
-        LoadFile("/documents/site.css", "css");
+        LoadFile("../documents/site.txt", "html");
+        LoadFile("../documents/site.js", "javascript");
+        LoadFile("../documents/site.css", "css");
 
-        LoadDiff("/documents/original.js", "/documents/modified.js", "javascript");
+        LoadDiff("../documents/original.js", "../documents/modified.js", "javascript");
     </script>
 </body>
 
